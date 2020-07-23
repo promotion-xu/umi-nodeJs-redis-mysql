@@ -21,17 +21,17 @@ export default function Layout({ children, location, route }: IEntryLayoutProps)
   }, [])
 
   // 404
-  if (isEmpty(matchedRoute)) {
-    return <Exception404 style={{ width, height }} />
-  }
+  // if (isEmpty(matchedRoute)) {
+  //   return <Exception404 style={{ width, height }} />
+  // }
 
   // validate attributes specified at route
   routeCheck(matchedRoute!)
 
-  if (signRequired(matchedRoute!, accessState)) {
-    clearAll()
-    return <Redirect to={{ pathname: '/login', search: `?redirectTo=${location.pathname}` }} />
-  }
+  // if (signRequired(matchedRoute!, accessState)) {
+  //   clearAll()
+  //   return <Redirect to={{ pathname: '/login', search: `?redirectTo=${location.pathname}` }} />
+  // }
 
   return (
     <LayoutSelector route={matchedRoute!} routes={route.routes!} canAccess={canAccess(matchedRoute!, accessState)}>

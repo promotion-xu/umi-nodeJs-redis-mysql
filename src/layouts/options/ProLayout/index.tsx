@@ -19,7 +19,7 @@ interface IProlayoutProps {
   canAccess: boolean
 }
 
-const ProLayout = React.memo(function({ children, routes, canAccess }: IProlayoutProps) {
+const ProLayout = React.memo(function ({ children, routes, canAccess }: IProlayoutProps) {
   console.count('Layout: PRO_LAYOUT')
   const { height } = useModel('useAppModel', m => pick(m, 'height'))
 
@@ -29,15 +29,15 @@ const ProLayout = React.memo(function({ children, routes, canAccess }: IProlayou
 
   let content = children
 
-  if (!canAccess) {
-    content = (
-      <Exception403
-        style={{
-          height: height! - 64 - 48
-        }}
-      />
-    )
-  }
+  // if (!canAccess) {
+  //   content = (
+  //     <Exception403
+  //       style={{
+  //         height: height! - 64 - 48
+  //       }}
+  //     />
+  //   )
+  // }
 
   return (
     <Layout>

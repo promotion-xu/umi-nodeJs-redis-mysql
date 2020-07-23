@@ -1,5 +1,5 @@
 import { useCallback, useState } from 'react'
-import { request, useModel } from 'umi'
+import { request, useModel, history } from 'umi'
 import { loadScript, getToken, setToken, getRememberme, setRememberme } from '@/helpers'
 
 export default function useLoginModel() {
@@ -22,17 +22,19 @@ export default function useLoginModel() {
   const login = useCallback(
     async (account: string, password: string) => {
       try {
-        const res = await request('/login', {
+        const res = await request('/api/user/login', {
           method: 'post',
           data: {
-            account,
+            username: account,
             password
           }
         })
-
-        setCurrentToken(res.data.token)
-        setToken(res.data.token, isRememberme)
-        refresh()
+        if (res.errno === 0) {
+          history.push('/dashboard/analysis')
+        }
+        // setCurrentToken(res.data.token)
+        // setToken(res.data.token, isRememberme)
+        // refresh()
       } catch (error) {
         // ignore
       }
