@@ -6,7 +6,7 @@ function Users() {
 
 Users.title = 'USERS_TITLE'
 Users.layout = 'PRO_LAYOUT'
-Users.requireSignin = true
+Users.requireSignin = false
 Users.access = 'canReadAdminUserManagement'
 
 export default Users
