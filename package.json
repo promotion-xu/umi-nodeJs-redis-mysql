@@ -4,7 +4,8 @@
   "description": "Scaffold for umi based project",
   "scripts": {
     "start": "umi dev",
-    "build": "umi build"
+    "build": "umi build",
+    "server": "node ./server/blog-1/bin/www.js"
   },
   "license": "MIT",
   "husky": {
@@ -40,6 +41,8 @@
   "dependencies": {
     "@umijs/hooks": "^1.9.2",
     "classnames": "^2.2.6",
-    "js-cookie": "^2.2.1"
+    "js-cookie": "^2.2.1",
+    "mysql": "^2.18.1",
+    "redis": "^3.0.2"
   }
 }

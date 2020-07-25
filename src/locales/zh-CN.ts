@@ -32,5 +32,10 @@ export default {
   USER_MANAGEMENT_MENU: '用户管理',
 
   // profile
-  PROFILE_TITLE: '个人信息'
+  PROFILE_TITLE: '个人信息',
+
+  // analysis
+  ADD_BLOG: '添加博客',
+  DELETE_BLOG: '删除博客',
+  UPDATE_BLOG: '更新博客'
 }

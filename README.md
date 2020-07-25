@@ -25,3 +25,11 @@ bash shells/build.sh
 ```bash
 docker build --no-cache -t <app-name>:<tag> .
 ```
+
+### redis
+
+1. Start
+
+```terminal
+  redis-server
+```

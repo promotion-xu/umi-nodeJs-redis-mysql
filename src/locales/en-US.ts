@@ -32,5 +32,9 @@ export default {
   USER_MANAGEMENT_MENU: 'User Management',
 
   // profile
-  PROFILE_TITLE: 'User Profile'
+  PROFILE_TITLE: 'User Profile',
+  // analysis
+  ADD_BLOG: 'Add Blog',
+  DELETE_BLOG: 'Delete Blog',
+  UPDATE_BLOG: 'Update Blog'
 }
